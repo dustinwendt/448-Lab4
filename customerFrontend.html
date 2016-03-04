@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Shop</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<form name="store" action = "customerBackend.php" method = "POST" onsubmit = "validate()">
+
+		<div class = "product">
+			<h3>Gibson -- $1,299.00</h3><br>
+			<img src = "gibson.jpg" height=400 width = 990><br>
+			Amount: <input type = "number" id = "gibson"><br>
+			<br>
+		</div>
+
+		<div class = "product">
+			<h3>Fender -- $1,799.99</h3><br>
+			<img src = "fender.png" height=400 width = 990><br>
+			Amount: <input type = "number" id = "fender"><br>
+			<br>
+		</div>
+
+		<div class = "product">
+			<h3>Epiphone -- $499.00</h3><br>
+			<img src = "epiphone.jpg" height=400 width = 990><br>
+			Amount: <input type = "number" id = "epiphone"><br>
+			<br>
+		</div>
+
+
+		<br>Username: <input type = "text" id = "username"><br>
+		Password: <input type = "text" id = "password"><br>
+
+		<b><u>Shipping:</u></b><br>
+		<input type = "radio" name = "shipping">Free 7-Day<br>
+		<input type = "radio" name = "shipping">$50.00 Overnight<br>
+		<input type = "radio" name = "shipping">$5.00 3-Day<br><br>
+
+		<input type = "submit">
+		<button onClick = "reset()">Reset</button>
+    </form>
+</body>
+</html>
