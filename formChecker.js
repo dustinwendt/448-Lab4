@@ -21,9 +21,9 @@ function shippingValidate()
 
 function validate()
 {
-	var num_gib document.getElementById('gibson').value;
-	var num_fen document.getElementById('fender').value;
-	var num_epi document.getElementById('epiphone').value;
+	var num_gib = document.getElementById('gibson').value;
+	var num_fen = document.getElementById('fender').value;
+	var num_epi = document.getElementById('epiphone').value;
 
 	if(num_gib < 0 || num_fen < 0 || num_epi <0)
 	{
