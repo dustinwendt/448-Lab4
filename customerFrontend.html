@@ -1,44 +1,45 @@
 <html>
 <head>
 	<title>Shop</title>
+	<script src = "formChecker.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-	<form name="store" action = "customerBackend.php" method = "POST" onsubmit = "validate()">
+	<form name="store" action = "customerBackend.php" method = "POST" onsubmit = "return validate()">
 
 		<div class = "product">
 			<h3>Gibson -- $1,299.00</h3><br>
 			<img src = "gibson.jpg" height=400 width = 990><br>
-			Amount: <input type = "number" id = "gibson"><br>
+			Amount: <input type = "number" name = "gibson" id = "gibson"><br>
 			<br>
 		</div>
 
 		<div class = "product">
 			<h3>Fender -- $1,799.99</h3><br>
 			<img src = "fender.png" height=400 width = 990><br>
-			Amount: <input type = "number" id = "fender"><br>
+			Amount: <input type = "number" name = "fender" id = "fender"><br>
 			<br>
 		</div>
 
 		<div class = "product">
 			<h3>Epiphone -- $499.00</h3><br>
 			<img src = "epiphone.jpg" height=400 width = 990><br>
-			Amount: <input type = "number" id = "epiphone"><br>
+			Amount: <input type = "number" name = "epiphone" id = "epiphone"><br>
 			<br>
 		</div>
 
 
-		<br>Username: <input type = "text" id = "username"><br>
-		Password: <input type = "text" id = "password"><br>
+		<br>Username: <input type = "text" name = "username"><br>
+		Password: <input type = "text" name = "password"><br>
 
 		<b><u>Shipping:</u></b><br>
-		<input type = "radio" name = "shipping">Free 7-Day<br>
-		<input type = "radio" name = "shipping">$50.00 Overnight<br>
-		<input type = "radio" name = "shipping">$5.00 3-Day<br><br>
+		<input type = "radio" name = "shipping" value = "0">Free 7-Day<br>
+		<input type = "radio" name = "shipping" value = "1">$50.00 Overnight<br>
+		<input type = "radio" name = "shipping" value = "2">$5.00 3-Day<br><br>
 
 		<input type = "submit">
-		<button onClick = "reset()">Reset</button>
+		<input type = "reset" onClick = "return reset()">
     </form>
 </body>
 </html>
