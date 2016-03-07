@@ -9,6 +9,8 @@ function reset()
 function shippingValidate()
 {
 	var shippingChoice = document.store.shipping;
+	var username = document.getElementById('username').value;
+	var password = document.getElementById('password').value;
 	for(i=0;i<shippingChoice.length;i++)
 	{
 		if(shippingChoice[i].checked == true)
@@ -36,12 +38,12 @@ function validate()
 		alert("Please select a shipping option");
 		return false;
 	}
-	else if(document.getElementById('username').value.indexOf('@') == -1 || document.getElementById('username').value.indexOf('.') == -1)
+	else if(username.indexOf('@') == -1 || username.value.indexOf('.') == -1)
 	{
 		alert("Please enter a username in the form of a valid e-mail");
 		return false;
 	}
-	else if(document.getElementById('password').value == '')
+	else if(password == '')
 	{
 		alert("Please enter a password");
 		return false;
